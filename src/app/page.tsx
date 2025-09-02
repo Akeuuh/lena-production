@@ -1,15 +1,6 @@
-import HeroSection from "@/components/landing/HeroSection"
-import BenefitsSection from "@/components/landing/BenefitsSection"
-import AboutSection from "@/components/landing/AboutSection"
-import CTABanner from "@/components/landing/CTABanner"
+import { redirect } from 'next/navigation'
 
-export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <BenefitsSection />
-      <AboutSection />
-      <CTABanner />
-    </>
-  )
+export default function RootPage() {
+  // Redirect root to default locale
+  redirect('/fr')
 }

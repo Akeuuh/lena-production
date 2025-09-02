@@ -1,0 +1,154 @@
+{
+  "common": {
+    "sophrologue": "Sophrologist",
+    "contact": "Contact",
+    "home": "Home",
+    "phone": "Phone",
+    "email": "Email", 
+    "address": "Address",
+    "openingHours": "Opening Hours",
+    "takeAppointment": "Book Appointment",
+    "bookSession": "Book a Session",
+    "learnMore": "Learn More",
+    "callDirectly": "or call directly",
+    "duration": "Session Duration",
+    "personalized": "Personalized"
+  },
+  "hero": {
+    "title": "Find your",
+    "titleHighlight": "inner balance",
+    "description": "Sophrology to manage your stress, improve your sleep and regain serenity and well-being in your daily life.",
+    "stats": {
+      "experience": "Years of Experience",
+      "clients": "Satisfied Clients",
+      "satisfaction": "Satisfaction Rate"
+    }
+  },
+  "benefits": {
+    "title": "The Benefits of Sophrology",
+    "subtitle": "Discover how sophrology can transform your life and help you achieve optimal physical and mental balance.",
+    "items": {
+      "stress": {
+        "title": "Stress Management",
+        "description": "Learn effective techniques to reduce your daily stress and regain your inner calm."
+      },
+      "sleep": {
+        "title": "Restorative Sleep",
+        "description": "Improve your sleep quality through relaxation and breathing exercises."
+      },
+      "emotions": {
+        "title": "Emotion Management",
+        "description": "Develop your emotional intelligence and learn to better manage your emotions."
+      },
+      "confidence": {
+        "title": "Self-Confidence",
+        "description": "Strengthen your self-esteem and develop unshakeable confidence."
+      },
+      "wellbeing": {
+        "title": "Daily Well-being",
+        "description": "Cultivate a lasting state of well-being and improve your quality of life."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimize your personal and professional performance with serenity."
+      }
+    }
+  },
+  "about": {
+    "title": "Sophie Zen, your sophrologist",
+    "description1": "Passionate about personal development and well-being, I discovered sophrology more than 10 years ago. This exceptional method allowed me to transform my own life before deciding to make it my profession.",
+    "description2": "My caring and personalized approach adapts to your specific needs. Together, we will work to help you regain balance and serenity in your daily life.",
+    "qualifications": "Training and Certifications",
+    "qualificationsList": {
+      "diploma": "Graduate of the French School of Sophrology",
+      "certification": "RNCP Level III Certification",
+      "member": "Member of the Sophrology Trade Association",
+      "training": "Continuing Education in Neuroscience"
+    },
+    "specializations": "Specializations",
+    "specializationsList": {
+      "stress": "Stress Management",
+      "sleep": "Sleep Disorders",
+      "preparation": "Mental Preparation",
+      "confidence": "Self-Confidence",
+      "burnout": "Burnout",
+      "anxiety": "Anxiety"
+    }
+  },
+  "cta": {
+    "badge": "Special Discovery Offer",
+    "title": "Ready to transform your life?",
+    "description": "Take advantage of -20% on your first sophrology session. Discover the benefits of this method and begin your journey to well-being.",
+    "button": "Book my first session",
+    "price": "€60",
+    "discountPrice": "€48 first session",
+    "duration": "1h"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Book an appointment for your first session or ask us your questions. I'm here to accompany you towards well-being.",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "selectSubject": "Select a subject",
+      "subjects": {
+        "first": "First Consultation",
+        "stress": "Stress Management",
+        "sleep": "Sleep Disorders",
+        "preparation": "Mental Preparation",
+        "other": "Other"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john.doe@email.com",
+        "phone": "06 12 34 56 78",
+        "message": "Describe your request or needs..."
+      },
+      "success": "Your message has been sent successfully! We will contact you shortly.",
+      "error": "An error occurred. Please try again later."
+    },
+    "info": {
+      "title": "Practical Information",
+      "phone": "Available for emergencies",
+      "email": "Response within 24h",
+      "address": "Practice Address",
+      "metro": "Metro: Opera (lines 3, 7, 8)",
+      "appointment": "Book online appointment",
+      "note": "Consultations are by appointment only. In case of emergency, don't hesitate to contact me directly by phone."
+    },
+    "hours": {
+      "monday": "Monday - Friday",
+      "saturday": "Saturday", 
+      "sunday": "Sunday",
+      "weekdays": "9:00 AM - 7:00 PM",
+      "saturdayHours": "9:00 AM - 1:00 PM",
+      "closed": "Closed"
+    },
+    "firstConsultation": {
+      "title": "First consultation?",
+      "description": "Take advantage of -20% on your first sophrology session",
+      "callNow": "Call now",
+      "schedule": "Mon-Fri: 9am-7pm | Sat: 9am-1pm"
+    }
+  },
+  "footer": {
+    "description": "Find your inner balance through sophrology. Specializing in stress management, sleep improvement and personal development.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "servicesList": {
+      "individual": "Individual Sessions",
+      "group": "Group Sessions",
+      "companies": "Corporate Interventions",
+      "online": "Online Consultations"
+    },
+    "legalNotice": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "copyright": "All rights reserved."
+  }
+}

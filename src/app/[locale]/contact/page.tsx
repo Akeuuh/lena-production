@@ -8,7 +8,12 @@ export const metadata: Metadata = {
   description: "Contactez Sophie Zen, sophrologue certifiée à Paris. Prise de rendez-vous, informations pratiques et localisation du cabinet.",
 }
 
-export default function ContactPage() {
+interface ContactPageProps {
+  params: Promise<{ locale: string }>
+}
+
+export default async function ContactPage({ params }: ContactPageProps) {
+  await params // We await params but don't need to use locale in this component yet
   return (
     <div className="min-h-screen bg-primary py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

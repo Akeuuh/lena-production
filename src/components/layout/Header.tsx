@@ -2,15 +2,29 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Globe } from 'lucide-react'
+// import { useTranslations, useLocale } from 'next-intl'
+import { useRouter, usePathname } from 'next/navigation'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
+  // const t = useTranslations('common')
+  // const locale = useLocale()
+  const locale = 'fr' // Temporary hardcode
+  const router = useRouter()
+  const pathname = usePathname()
 
   const navigation = [
     { name: 'Accueil', href: '/' },
     { name: 'Contact', href: '/contact' },
   ]
+
+  const switchLocale = (newLocale: string) => {
+    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
+    router.push(newPath)
+    setIsLangMenuOpen(false)
+  }
 
   return (
     <header className="bg-primary/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-light/20">
@@ -45,6 +59,38 @@ const Header = () => {
                 <span className="absolute inset-0 rounded-lg bg-light/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
               </Link>
             ))}
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="flex items-center space-x-2 text-cream hover:text-light transition-all duration-300 px-3 py-2 rounded-lg hover:bg-light/10"
+              >
+                <Globe size={20} />
+                <span className="text-sm font-medium uppercase">{locale}</span>
+              </button>
+              
+              {isLangMenuOpen && (
+                <div className="absolute right-0 mt-2 py-2 w-32 bg-primary-800 rounded-lg shadow-xl border border-light/20">
+                  <button
+                    onClick={() => switchLocale('fr')}
+                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-light/10 transition-colors ${
+                      locale === 'fr' ? 'text-coral font-medium' : 'text-cream'
+                    }`}
+                  >
+                    Français
+                  </button>
+                  <button
+                    onClick={() => switchLocale('en')}
+                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-light/10 transition-colors ${
+                      locale === 'en' ? 'text-coral font-medium' : 'text-cream'
+                    }`}
+                  >
+                    English
+                  </button>
+                </div>
+              )}
+            </div>
+            
             <Link
               href="/contact"
               className="bg-coral text-light px-6 py-3 rounded-full hover:bg-coral-600 transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:scale-105"
