@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-light py-12">
+    <div className="min-h-screen bg-primary py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-primary-800 mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-light mb-4">
             Contactez-nous
           </h1>
-          <p className="text-xl text-primary-600 max-w-3xl mx-auto">
+          <p className="text-xl text-cream max-w-3xl mx-auto">
             Prenez rendez-vous pour votre première séance ou posez-nous vos questions. 
             Je suis là pour vous accompagner vers le bien-être.
           </p>

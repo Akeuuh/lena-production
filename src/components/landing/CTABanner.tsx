@@ -3,7 +3,7 @@ import { ArrowRight, Gift } from 'lucide-react'
 
 const CTABanner = () => {
   return (
-    <section className="relative py-20 bg-cream overflow-hidden">
+    <section className="relative py-20 bg-primary overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-coral/15 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -16,11 +16,11 @@ const CTABanner = () => {
             <span className="text-sm font-medium">Offre découverte spéciale</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary-800">
+          <h2 className="text-4xl lg:text-5xl font-bold text-light">
             Prêt(e) à transformer votre vie ?
           </h2>
           
-          <p className="text-xl text-primary-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-cream max-w-3xl mx-auto leading-relaxed">
             Profitez de -20% sur votre première séance de sophrologie. 
             Découvrez les bienfaits de cette méthode et commencez votre voyage vers le bien-être.
           </p>
@@ -34,12 +34,12 @@ const CTABanner = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             
-            <div className="text-primary-700">
+            <div className="text-cream">
               <div className="flex items-center space-x-2">
                 <span className="text-sm">ou appelez directement le</span>
                 <a 
                   href="tel:+33612345678" 
-                  className="font-bold text-lg text-primary hover:text-primary-600 transition-colors"
+                  className="font-bold text-lg text-light hover:text-cream transition-colors"
                 >
                   06 12 34 56 78
                 </a>

@@ -22,7 +22,7 @@ const AboutSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-cream-50">
+    <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
@@ -42,15 +42,15 @@ const AboutSection = () => {
 
           <div className="space-y-6">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-light mb-6">
                 Sophie Zen, votre sophrologue
               </h2>
-              <p className="text-lg text-primary-600 leading-relaxed mb-4">
+              <p className="text-lg text-cream leading-relaxed mb-4">
                 Passionnée par le développement personnel et le bien-être, j&apos;ai découvert la 
                 sophrologie il y a plus de 15 ans. Cette méthode a transformé ma vie et m&apos;a 
                 donné envie d&apos;accompagner les autres dans leur quête d&apos;équilibre et de sérénité.
               </p>
-              <p className="text-lg text-primary-600 leading-relaxed">
+              <p className="text-lg text-cream leading-relaxed">
                 Mon approche bienveillante et personnalisée s&apos;adapte à vos besoins spécifiques. 
                 Que vous souhaitiez gérer votre stress, améliorer votre sommeil ou développer 
                 votre confiance en vous, je vous accompagne avec des techniques éprouvées et 
@@ -59,19 +59,19 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-primary-800 mb-4">
+              <h3 className="text-xl font-semibold text-light mb-4">
                 Formations et certifications
               </h3>
               {qualifications.map((qual, index) => (
-                <div key={index} className="flex items-center space-x-3 text-primary-600">
-                  <div className="text-primary">{qual.icon}</div>
+                <div key={index} className="flex items-center space-x-3 text-cream">
+                  <div className="text-light">{qual.icon}</div>
                   <span>{qual.text}</span>
                 </div>
               ))}
             </div>
 
             <div className="pt-4">
-              <h3 className="text-xl font-semibold text-primary-800 mb-4">
+              <h3 className="text-xl font-semibold text-light mb-4">
                 Spécialisations
               </h3>
               <div className="flex flex-wrap gap-3">

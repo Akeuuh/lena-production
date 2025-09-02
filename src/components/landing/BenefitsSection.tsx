@@ -35,13 +35,13 @@ const BenefitsSection = () => {
   ]
 
   return (
-    <section id="benefits" className="py-20 bg-light">
+    <section id="benefits" className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary-800 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-light mb-4">
             Les bienfaits de la sophrologie
           </h2>
-          <p className="text-xl text-primary-600 max-w-3xl mx-auto">
+          <p className="text-xl text-cream max-w-3xl mx-auto">
             Découvrez comment la sophrologie peut transformer votre vie et vous aider à 
             atteindre un équilibre physique et mental optimal.
           </p>
