@@ -1,21 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF9F2;
+  --foreground: #193F3C;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Primary colors */
+  --color-primary-50: #E6F0EF;
+  --color-primary-100: #C0DDD9;
+  --color-primary-200: #9AC9C4;
+  --color-primary-300: #74B5AE;
+  --color-primary-400: #4EA199;
+  --color-primary-500: #2B6E69;
+  --color-primary-600: #255E5A;
+  --color-primary-700: #1F4F4B;
+  --color-primary-800: #193F3C;
+  --color-primary-900: #132F2D;
+  --color-primary: #2B6E69;
+  
+  /* Cream colors */
+  --color-cream-50: #FEFCF8;
+  --color-cream-100: #FCF7ED;
+  --color-cream-200: #FAF1E1;
+  --color-cream-300: #F8EBD6;
+  --color-cream-400: #F6E5CA;
+  --color-cream-500: #F1D8B0;
+  --color-cream-600: #EBCB96;
+  --color-cream-700: #E5BE7C;
+  --color-cream-800: #DFB162;
+  --color-cream-900: #D9A448;
+  --color-cream: #F6E5CA;
+  
+  /* Sage colors */
+  --color-sage-50: #F0F3F0;
+  --color-sage-100: #DAE3D9;
+  --color-sage-200: #C4D3C3;
+  --color-sage-300: #AEC3AD;
+  --color-sage-400: #A5BBA3;
+  --color-sage-500: #8FAB8D;
+  --color-sage-600: #799B77;
+  --color-sage-700: #638B61;
+  --color-sage-800: #4D7B4B;
+  --color-sage-900: #376B35;
+  --color-sage: #A5BBA3;
+  
+  /* Coral colors */
+  --color-coral-50: #FCF5F2;
+  --color-coral-100: #F7E5DF;
+  --color-coral-200: #F2D5CC;
+  --color-coral-300: #EDC5B9;
+  --color-coral-400: #E8B5A6;
+  --color-coral-500: #E08C6E;
+  --color-coral-600: #D97C5B;
+  --color-coral-700: #D26C48;
+  --color-coral-800: #CB5C35;
+  --color-coral-900: #C44C22;
+  --color-coral: #E08C6E;
+  
+  /* Light colors */
+  --color-light-50: #FFFFFF;
+  --color-light-100: #FFFEFB;
+  --color-light-200: #FFFDF7;
+  --color-light-300: #FFFCF3;
+  --color-light-400: #FFFBEF;
+  --color-light-500: #FFF9F2;
+  --color-light-600: #FFF5E6;
+  --color-light-700: #FFF1DA;
+  --color-light-800: #FFEDCE;
+  --color-light-900: #FFE9C2;
+  --color-light: #FFF9F2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #193F3C;
+    --foreground: #FFF9F2;
   }
 }
 
