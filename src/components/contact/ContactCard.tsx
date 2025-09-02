@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Calendar } from 'lucide-react'
+import Link from 'next/link'
 
 const ContactCard = () => {
   const contactInfo = {
@@ -96,12 +97,12 @@ const ContactCard = () => {
       <div className="pt-6 border-t border-sage-200">
         <div className="flex items-center justify-center space-x-2 text-primary">
           <Calendar className="w-5 h-5" />
-          <a 
+          <Link 
             href="/contact"
             className="font-medium hover:text-primary-600 transition-colors"
           >
             Prendre rendez-vous en ligne
-          </a>
+          </Link>
         </div>
       </div>
 

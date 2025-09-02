@@ -9,9 +9,9 @@ import { useRouter, usePathname } from 'next/navigation'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
+  const [locale, setLocale] = useState<'fr' | 'en'>('fr')
   // const t = useTranslations('common')
   // const locale = useLocale()
-  const locale = 'fr' // Temporary hardcode
   const router = useRouter()
   const pathname = usePathname()
 
@@ -20,9 +20,10 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ]
 
-  const switchLocale = (newLocale: string) => {
+  const switchLocale = (newLocale: 'fr' | 'en') => {
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
     router.push(newPath)
+    setLocale(newLocale)
     setIsLangMenuOpen(false)
   }
 
