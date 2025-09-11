@@ -4,7 +4,16 @@ import Image from 'next/image'
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary to-primary-400 -z-10" />
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src="/herozone.jpg"
+          alt="Lavender field background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-600/80 via-primary/40 to-transparent -z-10" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -52,16 +61,6 @@ const HeroSection = () => {
           </div>
 
           <div className="relative">
-            <div className="relative w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-sage-400 opacity-20" />
-              <Image
-                src="https://via.placeholder.com/600x600/2B6E69/ffffff?text=Sophie+Zen"
-                alt="Sophie Zen - Sophrologue"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-sage-200 rounded-full blur-3xl" />
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-cream-200 rounded-full blur-3xl" />
           </div>
