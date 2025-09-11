@@ -15,11 +15,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' }
-    ],
-    shortcut: '/favicon.ico',
+    icon: '/public/favicon.png',
   },
 };
 
