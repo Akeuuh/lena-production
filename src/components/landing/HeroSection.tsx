@@ -44,20 +44,7 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            <div className="flex items-center space-x-8">
-              <div>
-                <div className="text-3xl font-bold text-cream">10+</div>
-                <div className="text-sm text-light">Années d&apos;expérience</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-cream">500+</div>
-                <div className="text-sm text-light">Clients satisfaits</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-cream">98%</div>
-                <div className="text-sm text-light">Taux de satisfaction</div>
-              </div>
-            </div>
+
           </div>
 
           <div className="relative">

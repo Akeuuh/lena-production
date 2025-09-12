@@ -34,10 +34,7 @@ const AboutSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-primary text-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold">10+</div>
-              <div className="text-sm">Années d&apos;expérience</div>
-            </div>
+
           </div>
 
           <div className="space-y-6">
@@ -45,10 +42,10 @@ const AboutSection = () => {
               <h2 className="text-4xl lg:text-5xl font-bold text-light mb-6">
                 Sophie Zen, votre sophrologue
               </h2>
-              <p className="text-lg text-cream leading-relaxed mb-4">
+               <p className="text-lg text-cream leading-relaxed mb-4">
                 Passionnée par le développement personnel et le bien-être, j&apos;ai découvert la 
-                sophrologie il y a plus de 15 ans. Cette méthode a transformé ma vie et m&apos;a 
-                donné envie d&apos;accompagner les autres dans leur quête d&apos;équilibre et de sérénité.
+                sophrologie qui a transformé ma vie et m&apos;a donné envie d&apos;accompagner les autres 
+                dans leur quête d&apos;équilibre et de sérénité.
               </p>
               <p className="text-lg text-cream leading-relaxed">
                 Mon approche bienveillante et personnalisée s&apos;adapte à vos besoins spécifiques. 
