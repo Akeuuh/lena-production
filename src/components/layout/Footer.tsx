@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { CONTACT_INFO } from '@/lib/contact-info'
 
 // Google icon component since it's not in lucide-react
@@ -19,6 +20,9 @@ const GoogleIcon = ({ size = 24 }: { size?: number }) => (
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const t = useTranslations('common')
+  const tFooter = useTranslations('footer')
+  const tHours = useTranslations('contact.hours')
 
   return (
     <footer className="bg-primary-800 text-light">
@@ -27,15 +31,15 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-cream mb-4">{CONTACT_INFO.name}</h3>
             <p className="text-light-200">
-              {CONTACT_INFO.title}
+              {t('sophrologue')}
             </p>
             <p className="text-gray-400 mt-2">
-              Votre bien-être est ma priorité
+              {tFooter('description')}
             </p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('contact')}</h4>
             <div className="space-y-3">
               <div className="flex items-center text-light-200">
                 <Phone size={16} className="mr-2" />
@@ -60,19 +64,19 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Horaires</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('openingHours')}</h4>
             <div className="space-y-2 text-light-200">
               <div className="flex items-center">
                 <Clock size={16} className="mr-2" />
-                <span>Lun - Ven: 9h - 19h</span>
+                <span>{tHours('monday')}: {tHours('weekdays')}</span>
               </div>
-              <p className="ml-6">Sam: 9h - 13h</p>
-              <p className="ml-6">Dim: Fermé</p>
+              <p className="ml-6">{tHours('saturday')}: {tHours('saturdayHours')}</p>
+              <p className="ml-6">{tHours('sunday')}: {tHours('closed')}</p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Suivez-nous</h4>
+            <h4 className="text-lg font-semibold mb-4">{tFooter('followUs')}</h4>
             <div className="flex space-x-4">
               <a
                 href={CONTACT_INFO.social.instagram}
@@ -96,21 +100,21 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="inline-block bg-coral text-white px-6 py-3 rounded-full hover:bg-coral-600 transition-colors duration-200 font-medium shadow-md hover:shadow-lg"
               >
-                Prendre rendez-vous
+                {tFooter('takeAppointment')}
               </a>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-700 text-center text-light-200">
-          <p>&copy; {currentYear} {CONTACT_INFO.name} - Sophrologue. Tous droits réservés.</p>
+          <p>&copy; {currentYear} {CONTACT_INFO.name} - {t('sophrologue')}. {tFooter('copyright')}</p>
           <div className="mt-2">
             <Link href="/mentions-legales" className="hover:text-cream transition-colors mx-2">
-              Mentions légales
+              {tFooter('legalNotice')}
             </Link>
             <span>|</span>
             <Link href="/politique-confidentialite" className="hover:text-cream transition-colors mx-2">
-              Politique de confidentialité
+              {tFooter('privacy')}
             </Link>
           </div>
         </div>

@@ -1,25 +1,24 @@
 import Image from 'next/image'
-import { Award, BookOpen, Users, Star } from 'lucide-react'
+import { Award } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { CONTACT_INFO } from '@/lib/contact-info'
 
 const AboutSection = () => {
+  const t = useTranslations('about')
+  
   const qualifications = [
     {
       icon: <Award className="w-5 h-5" />,
-      text: "Diplômée de l'École Française de Sophrologie"
+      text: t('qualificationsList.diploma')
     },
-    {
-      icon: <BookOpen className="w-5 h-5" />,
-      text: "Certification RNCP niveau III"
-    },
-    {
-      icon: <Users className="w-5 h-5" />,
-      text: "Membre de la Chambre Syndicale de Sophrologie"
-    },
-    {
-      icon: <Star className="w-5 h-5" />,
-      text: "Formation continue en neurosciences"
-    }
+  ]
+
+  const specializations = [
+    t('specializationsList.stress'),
+    t('specializationsList.sleep'),
+    t('specializationsList.preparation'),
+    t('specializationsList.perinatal'),
+    t('specializationsList.teens'),
   ]
 
   return (
@@ -41,46 +40,34 @@ const AboutSection = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-light mb-6">
-                {CONTACT_INFO.name}, votre sophrologue
+                {t('title').replace('Sophie Zen', CONTACT_INFO.name)}
               </h2>
                <p className="text-lg text-cream leading-relaxed mb-4">
-                Passionnée par le développement personnel et le bien-être, j&apos;ai découvert la 
-                sophrologie qui a transformé ma vie et m&apos;a donné envie d&apos;accompagner les autres 
-                dans leur quête d&apos;équilibre et de sérénité.
+                {t('description1')}
+              </p>
+              <p className="text-lg text-cream leading-relaxed mb-4">
+                {t('description2')}
               </p>
               <p className="text-lg text-cream leading-relaxed">
-                Mon approche bienveillante et personnalisée s&apos;adapte à vos besoins spécifiques. 
-                Que vous souhaitiez gérer votre stress, améliorer votre sommeil ou développer 
-                votre confiance en vous, je vous accompagne avec des techniques éprouvées et 
-                un suivi attentif.
+                {t('description3')}
               </p>
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-light mb-4">
-                Formations et certifications
-              </h3>
               {qualifications.map((qual, index) => (
                 <div key={index} className="flex items-center space-x-3 text-cream">
                   <div className="text-light">{qual.icon}</div>
-                  <span>{qual.text}</span>
+                  <span className="text-light font-semibold">{qual.text}</span>
                 </div>
               ))}
             </div>
 
             <div className="pt-4">
               <h3 className="text-xl font-semibold text-light mb-4">
-                Spécialisations
+                {t('specializations')}
               </h3>
               <div className="flex flex-wrap gap-3">
-                {[
-                  "Gestion du stress",
-                  "Troubles du sommeil",
-                  "Préparation mentale",
-                  "Périnatalité",
-                  "Adolescents",
-                  "Burn-out"
-                ].map((spec, index) => (
+                {specializations.map((spec, index) => (
                   <span
                     key={index}
                     className="px-4 py-2 bg-sage-100 text-primary-700 rounded-full text-sm font-medium"

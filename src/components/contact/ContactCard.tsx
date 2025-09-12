@@ -1,12 +1,21 @@
 import { Phone, Mail, MapPin, Clock, Calendar } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { CONTACT_INFO } from '@/lib/contact-info'
 
 const ContactCard = () => {
+  const t = useTranslations('contact.info')
+  const tCommon = useTranslations('common')
+  const tHours = useTranslations('contact.hours')
 
+  const openingHours = [
+    { day: tHours('monday'), hours: tHours('weekdays') },
+    { day: tHours('saturday'), hours: tHours('saturdayHours') },
+    { day: tHours('sunday'), hours: tHours('closed') }
+  ]
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-8 space-y-6 border border-sage-200">
-      <h3 className="text-2xl font-bold text-primary-800 mb-6">Informations pratiques</h3>
+      <h3 className="text-2xl font-bold text-primary-800 mb-6">{t('title')}</h3>
       
       <div className="space-y-4">
         <div className="flex items-start space-x-4">
@@ -16,13 +25,13 @@ const ContactCard = () => {
             </div>
           </div>
           <div>
-            <p className="text-sm font-medium text-primary-500">Téléphone</p>
+            <p className="text-sm font-medium text-primary-500">{tCommon('phone')}</p>
             <a 
               href={`tel:+33612345678`} 
               className="text-lg font-medium text-primary-800 hover:text-primary transition-colors">
               {CONTACT_INFO.phone}
             </a>
-            <p className="text-sm text-primary-500 mt-1">Disponible pour les urgences</p>
+            <p className="text-sm text-primary-500 mt-1">{t('phone')}</p>
           </div>
         </div>
 
@@ -33,13 +42,13 @@ const ContactCard = () => {
             </div>
           </div>
           <div>
-            <p className="text-sm font-medium text-primary-500">Email</p>
+            <p className="text-sm font-medium text-primary-500">{tCommon('email')}</p>
             <a 
               href={`mailto:${CONTACT_INFO.email}`}
               className="text-lg font-medium text-primary-800 hover:text-primary transition-colors">
               {CONTACT_INFO.email}
             </a>
-            <p className="text-sm text-primary-500 mt-1">Réponse sous 24h</p>
+            <p className="text-sm text-primary-500 mt-1">{t('email')}</p>
           </div>
         </div>
 
@@ -50,7 +59,7 @@ const ContactCard = () => {
             </div>
           </div>
           <div>
-            <p className="text-sm font-medium text-primary-500">Adresse du cabinet</p>
+            <p className="text-sm font-medium text-primary-500">{t('address')}</p>
             <p className="text-lg font-medium text-primary-800">
               {CONTACT_INFO.address.street}
             </p>
@@ -68,9 +77,9 @@ const ContactCard = () => {
             </div>
           </div>
           <div className="w-full">
-            <p className="text-sm font-medium text-gray-500 mb-3">Horaires d&apos;ouverture</p>
+            <p className="text-sm font-medium text-gray-500 mb-3">{tCommon('openingHours')}</p>
             <div className="space-y-2">
-              {CONTACT_INFO.openingHours.map((schedule, index) => (
+              {openingHours.map((schedule, index) => (
                 <div key={index} className="flex justify-between text-primary-800">
                   <span className="font-medium">{schedule.day}</span>
                   <span>{schedule.hours}</span>
@@ -90,15 +99,14 @@ const ContactCard = () => {
             rel="noopener noreferrer"
             className="font-medium hover:text-primary-600 transition-colors"
           >
-            Prendre rendez-vous en ligne
+            {t('appointment')}
           </a>
         </div>
       </div>
 
       <div className="bg-cream-100 rounded-lg p-4">
         <p className="text-sm text-primary-800">
-          <strong>Note:</strong> Les consultations se font uniquement sur rendez-vous. 
-          En cas d&apos;urgence, n&apos;hésitez pas à me contacter directement par téléphone.
+          {t('note')}
         </p>
       </div>
     </div>

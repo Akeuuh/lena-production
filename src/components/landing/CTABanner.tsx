@@ -1,8 +1,11 @@
 
 import { ArrowRight, Gift } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { CONTACT_INFO } from '@/lib/contact-info'
 
 const CTABanner = () => {
+  const t = useTranslations('cta')
+  const tCommon = useTranslations('common')
   return (
     <section className="relative py-20 bg-primary overflow-hidden">
       {/* Decorative Elements */}
@@ -14,16 +17,15 @@ const CTABanner = () => {
         <div className="text-center space-y-8">
           <div className="inline-flex items-center justify-center px-6 py-3 bg-coral/90 backdrop-blur-sm rounded-full text-light border border-coral mb-4">
             <Gift className="w-5 h-5 mr-2" />
-            <span className="text-sm font-medium">Offre découverte spéciale</span>
+            <span className="text-sm font-medium">{t('badge')}</span>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-light">
-            Prêt(e) à transformer votre vie ?
+            {t('title')}
           </h2>
           
           <p className="text-xl text-cream max-w-3xl mx-auto leading-relaxed">
-            Profitez de -20% sur votre première séance de sophrologie. 
-            Découvrez les bienfaits de cette méthode et commencez votre voyage vers le bien-être.
+            {t('description')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -33,13 +35,13 @@ const CTABanner = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-lg font-medium text-light bg-coral rounded-full hover:bg-coral-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
-              Réserver ma première séance
+              {t('button')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             
             <div className="text-cream">
               <div className="flex items-center space-x-2">
-                <span className="text-sm">ou appelez directement le</span>
+                <span className="text-sm">{tCommon('callDirectly')}</span>
                 <a 
                   href={`tel:+33${CONTACT_INFO.phone.replace(/\s/g, '').substring(1)}`} 
                   className="font-bold text-lg text-light hover:text-cream transition-colors"
@@ -52,16 +54,16 @@ const CTABanner = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
             <div className="bg-light/80 backdrop-blur-sm rounded-2xl p-6 border border-sage-300/50 shadow-lg">
-              <div className="text-3xl font-bold text-coral mb-2">60€</div>
-              <div className="text-sm text-primary-600">48€ première séance</div>
+              <div className="text-3xl font-bold text-coral mb-2">{t('price')}</div>
+              <div className="text-sm text-primary-600">{t('discountPrice')}</div>
             </div>
             <div className="bg-light/80 backdrop-blur-sm rounded-2xl p-6 border border-sage-300/50 shadow-lg">
-              <div className="text-3xl font-bold text-sage-700 mb-2">1h</div>
-              <div className="text-sm text-primary-600">Durée de la séance</div>
+              <div className="text-3xl font-bold text-sage-700 mb-2">{t('duration')}</div>
+              <div className="text-sm text-primary-600">{tCommon('duration')}</div>
             </div>
             <div className="bg-light/80 backdrop-blur-sm rounded-2xl p-6 border border-sage-300/50 shadow-lg">
               <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-primary-600">Personnalisé</div>
+              <div className="text-sm text-primary-600">{tCommon('personalized')}</div>
             </div>
           </div>
         </div>

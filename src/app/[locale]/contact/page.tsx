@@ -1,12 +1,18 @@
 import ContactForm from "@/components/contact/ContactForm"
-import ContactCard from "@/components/contact/ContactCard"
+import ContactCard from "@/components/contact/ContactCard"  
 import LocationMap from "@/components/contact/LocationMap"
+import { getTranslations } from 'next-intl/server'
 import { CONTACT_INFO } from "@/lib/contact-info"
 import { Metadata } from "next"
 
-export const metadata: Metadata = {
-  title: `Contact - ${CONTACT_INFO.name} Sophrologue Paris`,
-  description: `Contactez ${CONTACT_INFO.name}, sophrologue certifiée à Paris. Prise de rendez-vous, informations pratiques et localisation du cabinet.`,
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations('contact')
+  
+  return {
+    title: `${t('title')} - ${CONTACT_INFO.name} Sophrologue`,
+    description: t('subtitle'),
+  }
 }
 
 interface ContactPageProps {
@@ -14,24 +20,25 @@ interface ContactPageProps {
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {
-  await params // We await params but don't need to use locale in this component yet
+  const { locale } = await params
+  const t = await getTranslations('contact')
+  
   return (
     <div className="min-h-screen bg-primary py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-light mb-4">
-            Contactez-nous
+            {t('title')}
           </h1>
           <p className="text-xl text-cream max-w-3xl mx-auto">
-            Prenez rendez-vous pour votre première séance ou posez-nous vos questions. 
-            Je suis là pour vous accompagner vers le bien-être.
+            {t('subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="bg-white rounded-xl shadow-lg p-8 border border-sage-200">
             <h2 className="text-2xl font-bold text-primary-800 mb-6">
-              Envoyez-nous un message
+              {t('form.title')}
             </h2>
             <ContactForm />
           </div>
@@ -47,21 +54,21 @@ export default async function ContactPage({ params }: ContactPageProps) {
 
         <div className="mt-12 bg-cream-100 rounded-xl p-8 text-center border border-cream-300">
           <h3 className="text-2xl font-bold text-primary-800 mb-4">
-            Première consultation ?
+            {t('firstConsultation.title')}
           </h3>
           <p className="text-lg text-primary-700 mb-6">
-            Profitez de -20% sur votre première séance de sophrologie
+            {t('firstConsultation.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:+33${CONTACT_INFO.phone.replace(/\s/g, '').substring(1)}`}
               className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-coral rounded-lg hover:bg-coral-600 transition-colors shadow-md"
             >
-              Appelez maintenant
+              {t('firstConsultation.callNow')}
             </a>
             <div className="text-primary-700">
               <p className="font-semibold">{CONTACT_INFO.phone}</p>
-              <p className="text-sm">Lun-Ven: 9h-19h | Sam: 9h-13h</p>
+              <p className="text-sm">{t('firstConsultation.schedule')}</p>
             </div>
           </div>
         </div>

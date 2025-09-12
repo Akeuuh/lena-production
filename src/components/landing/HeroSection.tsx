@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { CONTACT_INFO } from '@/lib/contact-info'
 
 const HeroSection = () => {
+  const t = useTranslations('hero')
+  const tCommon = useTranslations('common')
+  
   return (
     <section className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 -z-20">
@@ -21,12 +25,11 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold text-light leading-tight">
-                Retrouvez votre
-                <span className="text-cream"> équilibre intérieur</span>
+                {t('title')}
+                <span className="text-cream"> {t('titleHighlight')}</span>
               </h1>
               <p className="mt-6 text-xl text-light leading-relaxed">
-                La sophrologie pour gérer votre stress, améliorer votre sommeil et retrouver 
-                sérénité et bien-être au quotidien.
+                {t('description')}
               </p>
             </div>
 
@@ -37,13 +40,13 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-light bg-coral rounded-full hover:bg-coral-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
-                Réserver une séance
+                {tCommon('bookSession')}
               </a>
               <Link
                 href="#benefits"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-light bg-transparent border-2 border-light rounded-full hover:bg-light hover:text-primary transition-all duration-200"
               >
-                En savoir plus
+                {tCommon('learnMore')}
               </Link>
             </div>
 

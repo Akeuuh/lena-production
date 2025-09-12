@@ -3,28 +3,26 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X, Globe } from 'lucide-react'
-// import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
 import { CONTACT_INFO } from '@/lib/contact-info'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
-  const [locale, setLocale] = useState<'fr' | 'en'>('fr')
-  // const t = useTranslations('common')
-  // const locale = useLocale()
+  const t = useTranslations('common')
+  const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
 
   const navigation = [
-    { name: 'Accueil', href: '/' },
-    { name: 'Contact', href: '/contact' },
+    { name: t('home'), href: '/' },
+    { name: t('contact'), href: '/contact' },
   ]
 
   const switchLocale = (newLocale: 'fr' | 'en') => {
     const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
     router.push(newPath)
-    setLocale(newLocale)
     setIsLangMenuOpen(false)
   }
 
@@ -43,9 +41,9 @@ const Header = () => {
                 </span>
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral transition-all duration-300 group-hover:w-full"></div>
               </div>
-              <span className="ml-3 text-sm text-cream/80 font-medium bg-light/10 backdrop-blur-sm px-3 py-1 rounded-full border border-light/20">
-                Sophrologue
-              </span>
+               <span className="ml-3 text-sm text-cream/80 font-medium bg-light/10 backdrop-blur-sm px-3 py-1 rounded-full border border-light/20">
+                 {t('sophrologue')}
+               </span>
             </Link>
           </div>
 
@@ -98,9 +96,9 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-coral text-light px-6 py-3 rounded-full hover:bg-coral-600 transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:scale-105"
-            >
-              Prendre RDV
-            </a>
+              >
+                {t('takeAppointment')}
+              </a>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -134,7 +132,7 @@ const Header = () => {
                   className="block w-full text-center bg-coral text-light px-4 py-3 rounded-lg hover:bg-coral-600 font-medium shadow-md hover:shadow-lg transition-all duration-300 mt-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Prendre RDV
+                  {t('takeAppointment')}
                 </a>
               </div>
             </div>

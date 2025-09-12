@@ -17,7 +17,7 @@
   "hero": {
     "title": "Retrouvez votre",
     "titleHighlight": "équilibre intérieur",
-    "description": "La sophrologie pour gérer votre stress, améliorer votre sommeil et retrouver sérénité et bien-être au quotidien.",
+    "description": "Bienvenue, je suis Léna, sophrologue à Avignon. Ici, on parle émotions, confiance et sérénité",
     "stats": {
       "experience": "Années d'expérience",
       "clients": "Clients satisfaits",
@@ -55,24 +55,21 @@
     }
   },
   "about": {
-    "title": "Sophie Zen, votre sophrologue",
-    "description1": "Passionnée par le développement personnel et le bien-être, j'ai découvert la sophrologie il y a plus de 10 ans. Cette méthode exceptionnelle m'a permis de transformer ma propre vie avant de décider d'en faire mon métier.",
-    "description2": "Mon approche bienveillante et personnalisée s'adapte à vos besoins spécifiques. Ensemble, nous travaillerons pour vous aider à retrouver l'équilibre et la sérénité dans votre quotidien.",
+    "title": "Léna Dubois, votre sophrologue",
+    "description1": "Après 16 années dans le monde de la chocolaterie, j’ai choisi de prendre un nouveau chemin : la sophrologie. Je l’ai découverte très jeune, à une période difficile de ma scolarité, et elle m’a accompagnée depuis.",
+    "description2": "Aujourd’hui, je souhaite à mon tour transmettre ces outils simples et puissants. J’accompagne les enfants, les adolescents et leurs parents pour mieux traverser les moments sensibles, apprivoiser leurs émotions et retrouver confiance et sérénité.",
+    "description3": "Mon intention : offrir un espace d’écoute, de douceur et de bienveillance, où chacun repart avec des clés concrètes pour son quotidien.",
     "qualifications": "Formations et certifications",
     "qualificationsList": {
-      "diploma": "Diplômée de l'École Française de Sophrologie",
-      "certification": "Certification RNCP niveau III",
-      "member": "Membre de la Chambre Syndicale de Sophrologie",
-      "training": "Formation continue en neurosciences"
+      "diploma": "Certification de sophrologie de centre européen de formation"
     },
     "specializations": "Spécialisations",
     "specializationsList": {
       "stress": "Gestion du stress",
-      "sleep": "Troubles du sommeil",
-      "preparation": "Préparation mentale",
-      "confidence": "Confiance en soi",
-      "burnout": "Burn-out",
-      "anxiety": "Anxiété"
+      "sleep": "Troubles du sommeil", 
+      "preparation": "Pathologies",
+      "perinatal": "Enfants",
+      "teens": "Adolescents"
     }
   },
   "cta": {
@@ -138,7 +135,9 @@
     }
   },
   "footer": {
-    "description": "Retrouvez votre équilibre intérieur grâce à la sophrologie. Spécialisée dans la gestion du stress, l'amélioration du sommeil et le développement personnel.",
+    "description": "Votre bien-être est ma priorité",
+    "followUs": "Suivez-nous",
+    "takeAppointment": "Prendre rendez-vous",
     "quickLinks": "Liens rapides",
     "services": "Services",
     "servicesList": {

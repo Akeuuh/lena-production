@@ -17,7 +17,7 @@
   "hero": {
     "title": "Find your",
     "titleHighlight": "inner balance",
-    "description": "Sophrology to manage your stress, improve your sleep and regain serenity and well-being in your daily life.",
+    "description": "Welcome, I'm Léna, sophrologist in Avignon. Here, we talk about emotions, confidence and serenity",
     "stats": {
       "experience": "Years of Experience",
       "clients": "Satisfied Clients",
@@ -55,24 +55,21 @@
     }
   },
   "about": {
-    "title": "Sophie Zen, your sophrologist",
-    "description1": "Passionate about personal development and well-being, I discovered sophrology more than 10 years ago. This exceptional method allowed me to transform my own life before deciding to make it my profession.",
-    "description2": "My caring and personalized approach adapts to your specific needs. Together, we will work to help you regain balance and serenity in your daily life.",
+    "title": "Léna Dubois, your sophrologist",
+    "description1": "After 16 years in the world of chocolate making, I chose to take a new path: sophrology. I discovered it very young, during a difficult period in my schooling, and it has accompanied me ever since.",
+    "description2": "Today, I want to pass on these simple and powerful tools in turn. I accompany children, teenagers and their parents to better navigate sensitive moments, tame their emotions and regain confidence and serenity.",
+    "description3": "My intention: to offer a space of listening, gentleness and benevolence, where everyone leaves with concrete keys for their daily life.",
     "qualifications": "Training and Certifications",
     "qualificationsList": {
-      "diploma": "Graduate of the French School of Sophrology",
-      "certification": "RNCP Level III Certification",
-      "member": "Member of the Sophrology Trade Association",
-      "training": "Continuing Education in Neuroscience"
+      "diploma": "Sophrology Certification from European Training Center"
     },
     "specializations": "Specializations",
     "specializationsList": {
       "stress": "Stress Management",
       "sleep": "Sleep Disorders",
-      "preparation": "Mental Preparation",
-      "confidence": "Self-Confidence",
-      "burnout": "Burnout",
-      "anxiety": "Anxiety"
+      "preparation": "Pathologies",
+      "perinatal": "Children",
+      "teens": "Teenagers"
     }
   },
   "cta": {
@@ -138,7 +135,9 @@
     }
   },
   "footer": {
-    "description": "Find your inner balance through sophrology. Specializing in stress management, sleep improvement and personal development.",
+    "description": "Your well-being is my priority",
+    "followUs": "Follow Us",
+    "takeAppointment": "Book Appointment",
     "quickLinks": "Quick Links",
     "services": "Services",
     "servicesList": {

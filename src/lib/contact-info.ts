@@ -9,11 +9,7 @@ export const CONTACT_INFO = {
     metro: "Proche centre-ville",
     country: "France"
   },
-  openingHours: [
-    { day: 'Lundi - Vendredi', hours: '9h00 - 19h00' },
-    { day: 'Samedi', hours: '9h00 - 13h00' },
-    { day: 'Dimanche', hours: 'Fermé' }
-  ],
+
   social: {
     website: "https://novalena.fr",
     instagram: "https://www.instagram.com/nova_lena_sophro?igsh=MWw4ZGhiMmFoMGVreQ==",

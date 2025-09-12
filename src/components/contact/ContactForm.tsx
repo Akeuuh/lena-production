@@ -3,12 +3,14 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useTranslations } from 'next-intl'
 import { contactFormSchema } from '@/lib/validations'
 import { Send, Loader2 } from 'lucide-react'
 import axios from 'axios'
 import type { ContactFormData } from '@/types'
 
 const ContactForm = () => {
+  const t = useTranslations('contact.form')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null
@@ -32,13 +34,13 @@ const ContactForm = () => {
       await axios.post('/api/contact', data)
       setSubmitStatus({
         type: 'success',
-        message: 'Votre message a été envoyé avec succès ! Nous vous recontacterons rapidement.'
+        message: t('success')
       })
       reset()
     } catch {
       setSubmitStatus({
         type: 'error',
-        message: 'Une erreur est survenue. Veuillez réessayer plus tard.'
+        message: t('error')
       })
     } finally {
       setIsSubmitting(false)
@@ -50,14 +52,14 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-primary-700 mb-2">
-            Nom complet *
+            {t('name')} *
           </label>
           <input
             type="text"
             id="name"
             {...register('name')}
             className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-            placeholder="Jean Dupont"
+            placeholder={t('placeholders.name')}
           />
           {errors.name && (
             <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -66,14 +68,14 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-primary-700 mb-2">
-            Email *
+            {t('email')} *
           </label>
           <input
             type="email"
             id="email"
             {...register('email')}
             className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-            placeholder="jean.dupont@email.com"
+            placeholder={t('placeholders.email')}
           />
           {errors.email && (
             <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -84,14 +86,14 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-primary-700 mb-2">
-            Téléphone *
+            {t('phone')} *
           </label>
           <input
             type="tel"
             id="phone"
             {...register('phone')}
             className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-            placeholder="06 12 34 56 78"
+            placeholder={t('placeholders.phone')}
           />
           {errors.phone && (
             <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -100,19 +102,19 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="subject" className="block text-sm font-medium text-primary-700 mb-2">
-            Sujet *
+            {t('subject')} *
           </label>
           <select
             id="subject"
             {...register('subject')}
             className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
           >
-            <option value="">Sélectionnez un sujet</option>
-            <option value="Première consultation">Première consultation</option>
-            <option value="Gestion du stress">Gestion du stress</option>
-            <option value="Troubles du sommeil">Troubles du sommeil</option>
-            <option value="Préparation mentale">Préparation mentale</option>
-            <option value="Autre">Autre</option>
+            <option value="">{t('selectSubject')}</option>
+            <option value={t('subjects.first')}>{t('subjects.first')}</option>
+            <option value={t('subjects.stress')}>{t('subjects.stress')}</option>
+            <option value={t('subjects.sleep')}>{t('subjects.sleep')}</option>
+            <option value={t('subjects.preparation')}>{t('subjects.preparation')}</option>
+            <option value={t('subjects.other')}>{t('subjects.other')}</option>
           </select>
           {errors.subject && (
             <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
@@ -122,14 +124,14 @@ const ContactForm = () => {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-primary-700 mb-2">
-          Message *
+          {t('message')} *
         </label>
         <textarea
           id="message"
           {...register('message')}
           rows={6}
           className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-          placeholder="Décrivez votre demande ou vos besoins..."
+          placeholder={t('placeholders.message')}
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
@@ -157,12 +159,12 @@ const ContactForm = () => {
           {isSubmitting ? (
             <>
               <Loader2 className="animate-spin mr-2 h-5 w-5" />
-              Envoi en cours...
+              {t('sending')}
             </>
           ) : (
             <>
               <Send className="mr-2 h-5 w-5" />
-              Envoyer le message
+              {t('submit')}
             </>
           )}
         </button>
