@@ -108,15 +108,6 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-primary-700 text-center text-light-200">
           <p>&copy; {currentYear} {CONTACT_INFO.name} - {t('sophrologue')}. {tFooter('copyright')}</p>
-          <div className="mt-2">
-            <Link href="/mentions-legales" className="hover:text-cream transition-colors mx-2">
-              {tFooter('legalNotice')}
-            </Link>
-            <span>|</span>
-            <Link href="/politique-confidentialite" className="hover:text-cream transition-colors mx-2">
-              {tFooter('privacy')}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
