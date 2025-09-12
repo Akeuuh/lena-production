@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { CONTACT_INFO } from '@/lib/contact-info'
 
 const HeroSection = () => {
   return (
@@ -30,12 +31,14 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
+              <a
+                href={CONTACT_INFO.business.resalib}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-light bg-coral rounded-full hover:bg-coral-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 Réserver une séance
-              </Link>
+              </a>
               <Link
                 href="#benefits"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-light bg-transparent border-2 border-light rounded-full hover:bg-light hover:text-primary transition-all duration-200"

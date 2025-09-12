@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Award, BookOpen, Users, Star } from 'lucide-react'
+import { CONTACT_INFO } from '@/lib/contact-info'
 
 const AboutSection = () => {
   const qualifications = [
@@ -40,7 +41,7 @@ const AboutSection = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-light mb-6">
-                Sophie Zen, votre sophrologue
+                {CONTACT_INFO.name}, votre sophrologue
               </h2>
                <p className="text-lg text-cream leading-relaxed mb-4">
                 Passionnée par le développement personnel et le bien-être, j&apos;ai découvert la 

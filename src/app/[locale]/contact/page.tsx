@@ -1,11 +1,12 @@
 import ContactForm from "@/components/contact/ContactForm"
 import ContactCard from "@/components/contact/ContactCard"
 import LocationMap from "@/components/contact/LocationMap"
+import { CONTACT_INFO } from "@/lib/contact-info"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact - Sophie Zen Sophrologue Paris",
-  description: "Contactez Sophie Zen, sophrologue certifiée à Paris. Prise de rendez-vous, informations pratiques et localisation du cabinet.",
+  title: `Contact - ${CONTACT_INFO.name} Sophrologue Paris`,
+  description: `Contactez ${CONTACT_INFO.name}, sophrologue certifiée à Paris. Prise de rendez-vous, informations pratiques et localisation du cabinet.`,
 }
 
 interface ContactPageProps {
@@ -53,13 +54,13 @@ export default async function ContactPage({ params }: ContactPageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+33612345678"
+              href={`tel:+33${CONTACT_INFO.phone.replace(/\s/g, '').substring(1)}`}
               className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-coral rounded-lg hover:bg-coral-600 transition-colors shadow-md"
             >
               Appelez maintenant
             </a>
             <div className="text-primary-700">
-              <p className="font-semibold">06 12 34 56 78</p>
+              <p className="font-semibold">{CONTACT_INFO.phone}</p>
               <p className="text-sm">Lun-Ven: 9h-19h | Sam: 9h-13h</p>
             </div>
           </div>

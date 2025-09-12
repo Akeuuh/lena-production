@@ -1,5 +1,6 @@
-import Link from 'next/link'
+
 import { ArrowRight, Gift } from 'lucide-react'
+import { CONTACT_INFO } from '@/lib/contact-info'
 
 const CTABanner = () => {
   return (
@@ -26,22 +27,24 @@ const CTABanner = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link
-              href="/contact"
+            <a
+              href={CONTACT_INFO.business.resalib}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 text-lg font-medium text-light bg-coral rounded-full hover:bg-coral-600 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Réserver ma première séance
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
+            </a>
             
             <div className="text-cream">
               <div className="flex items-center space-x-2">
                 <span className="text-sm">ou appelez directement le</span>
                 <a 
-                  href="tel:+33612345678" 
+                  href={`tel:+33${CONTACT_INFO.phone.replace(/\s/g, '').substring(1)}`} 
                   className="font-bold text-lg text-light hover:text-cream transition-colors"
                 >
-                  06 12 34 56 78
+                  {CONTACT_INFO.phone}
                 </a>
               </div>
             </div>

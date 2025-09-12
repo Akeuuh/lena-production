@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Menu, X, Globe } from 'lucide-react'
 // import { useTranslations, useLocale } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
+import { CONTACT_INFO } from '@/lib/contact-info'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,7 +39,7 @@ const Header = () => {
             <Link href="/" className="flex items-center group">
               <div className="relative">
                 <span className="text-3xl font-bold text-light group-hover:text-cream transition-colors duration-300">
-                  Sophie Zen
+                  {CONTACT_INFO.name}
                 </span>
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral transition-all duration-300 group-hover:w-full"></div>
               </div>
@@ -92,12 +93,14 @@ const Header = () => {
               )}
             </div>
             
-            <Link
-              href="/contact"
+            <a
+              href={CONTACT_INFO.business.resalib}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-coral text-light px-6 py-3 rounded-full hover:bg-coral-600 transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:scale-105"
             >
               Prendre RDV
-            </Link>
+            </a>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -124,13 +127,15 @@ const Header = () => {
                     {item.name}
                   </Link>
                 ))}
-                <Link
-                  href="/contact"
+                <a
+                  href={CONTACT_INFO.business.resalib}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center bg-coral text-light px-4 py-3 rounded-lg hover:bg-coral-600 font-medium shadow-md hover:shadow-lg transition-all duration-300 mt-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Prendre RDV
-                </Link>
+                </a>
               </div>
             </div>
           </div>

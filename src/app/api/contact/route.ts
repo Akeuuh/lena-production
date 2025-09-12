@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { contactFormSchema } from '@/lib/validations'
+import { CONTACT_INFO } from '@/lib/contact-info'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -12,7 +13,7 @@ export async function POST(request: NextRequest) {
     
     const emailData = {
       from: process.env.RESEND_FROM || 'Site Web Sophie Zen <noreply@sophie-zen.fr>',
-      to: [process.env.RESEND_TO || 'contact@sophie-zen.fr'],
+      to: [process.env.RESEND_TO || CONTACT_INFO.email],
       subject: `Nouveau message de ${validatedData.name} - ${validatedData.subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -47,7 +48,7 @@ export async function POST(request: NextRequest) {
     }
 
     const confirmationEmailData = {
-      from: process.env.RESEND_FROM || 'Sophie Zen <noreply@sophie-zen.fr>',
+      from: process.env.RESEND_FROM || `${CONTACT_INFO.name} <noreply@sophie-zen.fr>`,
       to: [validatedData.email],
       subject: 'Confirmation de votre message - Sophie Zen Sophrologue',
       html: `
@@ -66,13 +67,13 @@ export async function POST(request: NextRequest) {
             <p><strong>Message:</strong> ${validatedData.message}</p>
           </div>
           
-          <p>En attendant, n'hésitez pas à me contacter directement par téléphone au 06 12 34 56 78 pour toute urgence.</p>
+          <p>En attendant, n'hésitez pas à me contacter directement par téléphone au ${CONTACT_INFO.phone} pour toute urgence.</p>
           
           <p>À très bientôt,</p>
-          <p><strong>Sophie Zen</strong><br>
-          Sophrologue certifiée RNCP<br>
-          06 12 34 56 78<br>
-          contact@sophie-zen.fr</p>
+          <p><strong>${CONTACT_INFO.name}</strong><br>
+          ${CONTACT_INFO.title}<br>
+          ${CONTACT_INFO.phone}<br>
+          ${CONTACT_INFO.email}</p>
         </div>
       `,
     }
