@@ -51,14 +51,14 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-primary-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
             {t('name')} *
           </label>
           <input
             type="text"
             id="name"
             {...register('name')}
-            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
             placeholder={t('placeholders.name')}
           />
           {errors.name && (
@@ -67,14 +67,14 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-primary-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
             {t('email')} *
           </label>
           <input
             type="email"
             id="email"
             {...register('email')}
-            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
             placeholder={t('placeholders.email')}
           />
           {errors.email && (
@@ -85,14 +85,14 @@ const ContactForm = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-primary-700 mb-2">
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
             {t('phone')} *
           </label>
           <input
             type="tel"
             id="phone"
             {...register('phone')}
-            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
             placeholder={t('placeholders.phone')}
           />
           {errors.phone && (
@@ -101,13 +101,13 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-primary-700 mb-2">
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-900 mb-2">
             {t('subject')} *
           </label>
           <select
             id="subject"
             {...register('subject')}
-            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
           >
             <option value="">{t('selectSubject')}</option>
             <option value={t('subjects.first')}>{t('subjects.first')}</option>
@@ -123,14 +123,14 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-primary-700 mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
           {t('message')} *
         </label>
         <textarea
           id="message"
           {...register('message')}
           rows={6}
-          className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+          className="w-full px-4 py-3 border border-sage-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
           placeholder={t('placeholders.message')}
         />
         {errors.message && (
