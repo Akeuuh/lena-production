@@ -12,7 +12,8 @@
     "learnMore": "En savoir plus",
     "callDirectly": "ou appelez directement le",
     "duration": "Durée de la séance",
-    "personalized": "Personnalisé"
+    "personalized": "Personnalisé",
+    "sessionPrice": "Séance"
   },
   "hero": {
     "title": "Retrouvez votre",
@@ -73,12 +74,12 @@
     }
   },
   "cta": {
-    "badge": "Offre découverte spéciale",
+    "badge": "Découvrir la sophrologie",
     "title": "Prêt(e) à transformer votre vie ?",
-    "description": "Profitez de -20% sur votre première séance de sophrologie. Découvrez les bienfaits de cette méthode et commencez votre voyage vers le bien-être.",
-    "button": "Réserver ma première séance",
-    "price": "60€",
-    "discountPrice": "48€ première séance",
+    "description": "Découvrez les bienfaits de la sophrologie et commencez votre voyage vers le bien-être. Réservez votre séance dès aujourd'hui.",
+    "button": "Réserver une séance",
+    "price": "À partir de 40€",
+    "discountPrice": "par séance",
     "duration": "1h"
   },
   "contact": {
@@ -114,8 +115,9 @@
       "title": "Informations pratiques",
       "phone": "Disponible pour les urgences",
       "email": "Réponse sous 24h",
-      "address": "Adresse du cabinet",
-      "metro": "Métro: Opéra (lignes 3, 7, 8)",
+      "address": "Zone de service",
+      "addressText": "Autour d'Avignon",
+      "metro": "Autour d'Avignon",
       "appointment": "Prendre rendez-vous en ligne",
       "note": "Les consultations se font uniquement sur rendez-vous. En cas d'urgence, n'hésitez pas à me contacter directement par téléphone."
     },
@@ -129,7 +131,7 @@
     },
     "firstConsultation": {
       "title": "Première consultation ?",
-      "description": "Profitez de -20% sur votre première séance de sophrologie",
+      "description": "Réservez votre première séance de sophrologie dès aujourd'hui",
       "callNow": "Appelez maintenant",
       "schedule": "Lun-Ven: 9h-19h | Sam: 9h-13h"
     }

@@ -4,9 +4,9 @@ export const CONTACT_INFO = {
   phone: "06 67 44 53 27",
   email: "novalenasophro@gmail.com",
   address: {
-    street: "169 route de Velleron",
-    city: "84250 Le Thor",
-    metro: "Proche centre-ville",
+    street: "Around Avignon",
+    city: "Autour d'Avignon",
+    metro: "Around Avignon area",
     country: "France"
   },
 

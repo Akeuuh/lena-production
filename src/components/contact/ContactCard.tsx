@@ -61,12 +61,8 @@ const ContactCard = () => {
           <div>
             <p className="text-sm font-medium text-primary-500">{t('address')}</p>
             <p className="text-lg font-medium text-primary-800">
-              {CONTACT_INFO.address.street}
+              {t('addressText')}
             </p>
-            <p className="text-lg font-medium text-primary-800">
-              {CONTACT_INFO.address.city}
-            </p>
-            <p className="text-sm text-primary-500 mt-1">{CONTACT_INFO.address.metro}</p>
           </div>
         </div>
 

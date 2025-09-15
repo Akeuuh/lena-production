@@ -12,7 +12,8 @@
     "learnMore": "Learn More",
     "callDirectly": "or call directly",
     "duration": "Session Duration",
-    "personalized": "Personalized"
+    "personalized": "Personalized",
+    "sessionPrice": "Session"
   },
   "hero": {
     "title": "Find your",
@@ -73,12 +74,12 @@
     }
   },
   "cta": {
-    "badge": "Special Discovery Offer",
+    "badge": "Discover Sophrology",
     "title": "Ready to transform your life?",
-    "description": "Take advantage of -20% on your first sophrology session. Discover the benefits of this method and begin your journey to well-being.",
-    "button": "Book my first session",
-    "price": "€60",
-    "discountPrice": "€48 first session",
+    "description": "Discover the benefits of sophrology and begin your journey to well-being. Book your session today.",
+    "button": "Book a session",
+    "price": "From €40",
+    "discountPrice": "per session",
     "duration": "1h"
   },
   "contact": {
@@ -114,8 +115,9 @@
       "title": "Practical Information",
       "phone": "Available for emergencies",
       "email": "Response within 24h",
-      "address": "Practice Address",
-      "metro": "Metro: Opera (lines 3, 7, 8)",
+      "address": "Service Area",
+      "addressText": "Around Avignon",
+      "metro": "Around Avignon",
       "appointment": "Book online appointment",
       "note": "Consultations are by appointment only. In case of emergency, don't hesitate to contact me directly by phone."
     },
@@ -129,7 +131,7 @@
     },
     "firstConsultation": {
       "title": "First consultation?",
-      "description": "Take advantage of -20% on your first sophrology session",
+      "description": "Book your first sophrology session today",
       "callNow": "Call now",
       "schedule": "Mon-Fri: 9am-7pm | Sat: 9am-1pm"
     }
